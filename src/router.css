@@ -1,0 +1,23 @@
+.app-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 12vh 73vh 6vh;
+  max-height: 100vh;
+  row-gap: 2vh;
+  margin-top: 2vh;
+}
+
+.white-container {
+  background-color: white;
+  border-radius: 15px;
+  width: 80%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body,
+html {
+  font-family: "Poppins";
+  color: #141414;
+}
