@@ -5,8 +5,6 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 import fractal
 
 
-input_data = np.array([0, 5, 1])
-
 for r in range(1, 5):
     l = 3 ** r
     n = l ** 2
