@@ -31,7 +31,10 @@ export default function Results() {
     if (excitedState > maxState) {
       setExcitedState(maxState);
     }
-  }, [recursion]);
+    if (excitedState < 1) {
+      setExcitedState(1);
+    }
+  }, [excitedState, recursion]);
 
   return (
     <div
@@ -44,6 +47,12 @@ export default function Results() {
         alignItems: "center",
       }}
     >
+      <div
+        className="title"
+        style={{ alignSelf: "flex-start", marginLeft: "10%" }}
+      >
+        Results
+      </div>
       <div
         style={{
           display: "flex",
@@ -95,7 +104,7 @@ export default function Results() {
         }}
       >
         <img
-          style={{ height: 400 }}
+          style={{ height: 398, boxShadow: "0 0 1px 1px rgba(0,0,0,1)" }}
           src={fractalUrl}
           alt="image not found"
         ></img>
