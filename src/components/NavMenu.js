@@ -18,6 +18,17 @@ export default function NavMenu() {
       </Link>
       <Link
         className="nav-link"
+        to="/schroedinger"
+        style={
+          location === "/schroedinger"
+            ? { backgroundColor: "white", color: "#120d31" }
+            : {}
+        }
+      >
+        Solving Schroedinger's equation
+      </Link>
+      <Link
+        className="nav-link"
         to="/fractal"
         style={
           location === "/fractal"
@@ -37,17 +48,6 @@ export default function NavMenu() {
         }
       >
         Construction of the Hamiltonian
-      </Link>
-      <Link
-        className="nav-link"
-        to="/schroedinger"
-        style={
-          location === "/schroedinger"
-            ? { backgroundColor: "white", color: "#120d31" }
-            : {}
-        }
-      >
-        Solving Schroedinger's equation
       </Link>
       <Link
         className="nav-link"
