@@ -18,7 +18,7 @@ function App() {
         <div className="white-container">
           <Header />
         </div>
-        <div className="white-container">
+        <div className="white-container" style={{ backgroundColor: "white" }}>
           <Switch>
             <Route exact path="/" component={Introduction} />
             <Route path="/fractal" component={FractalFormation} />

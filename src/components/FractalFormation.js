@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { FractalCode } from "./Code";
 
 export default function FractalFormation() {
   const [recursion, setRecursion] = useState(1);
+  const [show, setShow] = useState(false);
+
   const cost = {
     1: "9 comparisons",
     2: "810 comparisons",
@@ -12,7 +15,9 @@ export default function FractalFormation() {
   };
 
   let fractalUrl =
-    "/assets/normal/fractals/fract" + recursion.toString() + ".png";
+    "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/normal/fractals/fract" +
+    recursion.toString() +
+    ".png";
 
   return (
     <div className="section-container">
@@ -28,8 +33,10 @@ export default function FractalFormation() {
             display: "flex",
             width: 800,
             flexDirection: "column",
-            height: "100%",
-            justifyContent: "space-around",
+            marginTop: "2.5%",
+            height: "90%",
+            justifyContent: "space-between",
+            width: 650,
           }}
         >
           <div className="title"> Fractal formation</div>
@@ -48,6 +55,32 @@ export default function FractalFormation() {
             takes all the points and sets them to 1 if they lay in the center
             part of the area. Each subsequent step does the same for all the
             smaller areas.
+          </div>
+          <div onClick={() => setShow(!show)}>See code</div>
+          <div
+            style={
+              show
+                ? {
+                    position: "absolute",
+                    backgroundColor: "white",
+                    borderRadius: 15,
+                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+                    padding: 18,
+                  }
+                : { display: "none" }
+            }
+          >
+            <div onClick={() => setShow(!show)}>X close</div>
+            <FractalCode />
+            <div>
+              <a
+                href="https://github.com/a96lex/fractal-potential-2d-frontend/blob/616ed526637ff00c578d3e1584b9dad6bc993410/code/fractal_and_hamiltonian.f90#L18-L44"
+                target="blank"
+                style={{ textAlign: "right", color: "#120D31" }}
+              >
+                See full source on github
+              </a>
+            </div>
           </div>
         </div>
         <div
@@ -76,7 +109,11 @@ export default function FractalFormation() {
           <img
             src={fractalUrl}
             alt="not found"
-            style={{ height: 380, width: 380 }}
+            style={{
+              height: 380,
+              width: 380,
+              boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+            }}
           />
           <div style={{ textAlign: "center" }}>
             Computation cost: {cost[recursion]}

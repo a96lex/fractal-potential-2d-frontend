@@ -10,14 +10,14 @@ export default function Results() {
   let maxState = (3 ** recursion) ** 2 - 1;
 
   let fractalUrl =
-    "/assets/" +
+    "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/" +
     fractalType +
     "/fractals/fract" +
     recursion.toString() +
     ".png";
 
   let excitedUrl =
-    "/assets/" +
+    "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/" +
     fractalType +
     "/" +
     recursion.toString() +
