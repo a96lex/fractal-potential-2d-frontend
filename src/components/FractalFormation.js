@@ -44,7 +44,7 @@ export default function FractalFormation() {
             The Sierpinsky Carpet is a 2D generalization of the Cantor Set:
           </div>
           <img src="/assets/cantorset.png" alt="Image not found" />
-          <div>My approach</div>
+          <div>Method:</div>
           <div>
             Create a N x N grid depending on the recursion level (r), with N = 3
             <sup>r</sup>.
@@ -64,7 +64,7 @@ export default function FractalFormation() {
                     position: "absolute",
                     backgroundColor: "white",
                     borderRadius: 15,
-                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
                     padding: 18,
                   }
                 : { display: "none" }
@@ -112,7 +112,7 @@ export default function FractalFormation() {
             style={{
               height: 380,
               width: 380,
-              boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+              boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
             }}
           />
           <div style={{ textAlign: "center" }}>
