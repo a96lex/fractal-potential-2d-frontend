@@ -1,23 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { FractalCode, HamiltonianCode } from "./Code";
+import React, { useState } from "react";
+import { HamiltonianCode } from "./Code";
 
 export default function Hamiltonian() {
-  const [recursion, setRecursion] = useState(1);
   const [show, setShow] = useState(false);
-
-  const cost = {
-    1: "9 comparisons",
-    2: "810 comparisons",
-    3: "66339 comparisons",
-    4: "5380020 comparisons",
-    5: "435840669 comparisons",
-    6: "Max integer size exceeded",
-  };
-
-  let hamiltonianUrl =
-    "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/normal/fractals/fract" +
-    recursion.toString() +
-    ".png";
 
   return (
     <div className="section-container">
@@ -45,7 +30,7 @@ export default function Hamiltonian() {
             Hamiltonian matrix needs to be constructed according to the system's
             conditions.
           </div>
-          <div>My approach</div>
+          <div>Method:</div>
           <ol>
             <li>
               Dump the potential matrix to a 1-Dimensional vector of size N
@@ -62,10 +47,10 @@ export default function Hamiltonian() {
                 row remains 0.
               </li>
               <li>
-                If in that point there is a potential equal to 1:
+                If in that point there is a potential equal to -1:
                 <li>
                   Set the diagonal value of the corresponding row in the
-                  Hamiltonian to 4/Δx<sup>2</sup>.
+                  Hamiltonian to -4/Δx<sup>2</sup>.
                 </li>
                 <li>
                   Check all neighbouring points. If any of them is equal to 1,
@@ -84,7 +69,7 @@ export default function Hamiltonian() {
                     position: "absolute",
                     backgroundColor: "white",
                     borderRadius: 15,
-                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
                     padding: 18,
                   }
                 : { display: "none" }
@@ -114,29 +99,33 @@ export default function Hamiltonian() {
             marginLeft: 25,
           }}
         >
-          <div style={{ fontWeight: 600, fontSize: 25 }}>Resulting fractal</div>
-          <div className="parameter-container">
-            <div className="nav-link">Recursion value</div>
-            <input
-              className="custom-input"
-              type="number"
-              min="1"
-              max="6"
-              value={recursion}
-              onChange={(e) => setRecursion(e.target.value)}
-            />
+          <div style={{ fontWeight: 600, fontSize: 25 }}>
+            Hamiltonian example
           </div>
+
           <img
-            src={hamiltonianUrl}
+            src="https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/hamiltonian.png"
             alt="not found"
             style={{
-              height: 380,
-              width: 380,
-              boxShadow: "0 0 13px 6px rgba(0,0,0,0.20)",
+              objectFit: "cover",
+              height: 280,
+              width: 520,
+              boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
+              borderRadius: 8,
             }}
           />
-          <div style={{ textAlign: "center" }}>
-            Computation cost: {cost[recursion]}
+          <div style={{ textAlign: "center", width: 400, fontSize: 14 }}>
+            Figure 3: An example of a coordinate matrix (a), the corresponding
+            Hamiltonian matrix (b) and the 1D array (c) constructed using (a).
+            For illustration, some pixels in (a) and their corresponding
+            rows/elements in (b) and (c) are marked with the same colour.&nbsp;
+            <a
+              href="https://www.researchgate.net/publication/340984632_Scars_in_the_wavefunction_A_study_of_different_potential_wells_using_the_finite_difference_method"
+              target="blank"
+              style={{ textAlign: "right", color: "#120D31" }}
+            >
+              Source
+            </a>
           </div>
         </div>
       </div>
