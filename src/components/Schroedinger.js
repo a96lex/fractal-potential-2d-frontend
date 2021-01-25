@@ -89,8 +89,8 @@ export default function Hamiltonian() {
             <li>Construct the potential matrix</li>
             <li>Construct the Hamiltonian matrix</li>
             <li>
-              Diagonalze the Hamiltonian matrix to obtai the its eigenvalues and
-              eigenvectors. Those are the wavefunctions.
+              Diagonalze the Hamiltonian matrix to obtain the its eigenvalues
+              and eigenvectors. Those are the wavefunctions.
             </li>
           </ol>
 
