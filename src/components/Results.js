@@ -31,8 +31,8 @@ export default function Results() {
     if (excitedState > maxState) {
       setExcitedState(maxState);
     }
-    if (excitedState < 1) {
-      setExcitedState(1);
+    if (excitedState < 0) {
+      setExcitedState(0);
     }
   }, [excitedState, recursion]);
 
