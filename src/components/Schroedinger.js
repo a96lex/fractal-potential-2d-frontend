@@ -35,6 +35,7 @@ export default function Hamiltonian() {
       <div
         style={{
           display: "flex",
+          width: "90%",
           height: "100%",
           justifyContent: "space-between",
         }}
@@ -161,7 +162,7 @@ export default function Hamiltonian() {
                   flexDirection: "column",
                   boxShadow: "0 0 8px 2px rgba(0,0,0,0.08)",
                   width: 260,
-                  height: 220,
+                  height: "26vh",
                 }}
               >
                 <img
