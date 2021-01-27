@@ -5,18 +5,18 @@ export default function Results() {
   const [recursion, setRecursion] = useState(1);
   const [excitedState, setExcitedState] = useState(0);
 
-  let fractalType = reversed ? "reversed" : "normal";
+  const fractalType = reversed ? "reversed" : "normal";
 
-  let maxState = (3 ** recursion) ** 2 - 1;
+  const maxState = (3 ** recursion) ** 2 - 1;
 
-  let fractalUrl =
+  const fractalUrl =
     "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/" +
     fractalType +
     "/fractals/fract" +
     recursion.toString() +
     ".png";
 
-  let excitedUrl =
+  const excitedUrl =
     "https://raw.githubusercontent.com/a96lex/fractal-potential-2d-frontend/main/public/assets/" +
     fractalType +
     "/" +
