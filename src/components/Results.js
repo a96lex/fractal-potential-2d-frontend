@@ -109,7 +109,7 @@ export default function Results() {
           alt="image not found"
         ></img>
         <img
-          style={{ height: 517 }}
+          style={{ height: 398, boxShadow: "0 0 1px 1px rgba(0,0,0,1)" }}
           src={excitedUrl}
           alt="image not found"
         ></img>
