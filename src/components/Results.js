@@ -34,7 +34,7 @@ export default function Results() {
     if (excitedState < 0) {
       setExcitedState(0);
     }
-  }, [excitedState, recursion]);
+  }, [excitedState, recursion, maxState]);
 
   return (
     <div className="section-container">
@@ -98,12 +98,12 @@ export default function Results() {
         <img
           className="fractal-img"
           src={fractalUrl}
-          alt="image not found"
+          alt="fractal not found"
         ></img>
         <img
           className="fractal-img"
           src={excitedUrl}
-          alt="image not found"
+          alt="solution not found"
         ></img>
       </div>
     </div>

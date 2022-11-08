@@ -16,12 +16,10 @@ export default function Hamiltonian() {
         <div
           style={{
             display: "flex",
-            width: 800,
             flexDirection: "column",
             marginTop: "2.5%",
             height: "90%",
             justifyContent: "space-between",
-            width: 550,
           }}
         >
           <div className="title"> Constructing the Hamiltonian</div>
@@ -66,12 +64,12 @@ export default function Hamiltonian() {
             style={
               show
                 ? {
-                    position: "absolute",
-                    backgroundColor: "white",
-                    borderRadius: 15,
-                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
-                    padding: 18,
-                  }
+                  position: "absolute",
+                  backgroundColor: "white",
+                  borderRadius: 15,
+                  boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
+                  padding: 18,
+                }
                 : { display: "none" }
             }
           >

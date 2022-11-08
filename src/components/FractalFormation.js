@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FractalCode } from "./Code";
 
 export default function FractalFormation() {
@@ -31,19 +31,17 @@ export default function FractalFormation() {
         <div
           style={{
             display: "flex",
-            width: 800,
             flexDirection: "column",
             marginTop: "2.5%",
             height: "90%",
             justifyContent: "space-between",
-            width: 650,
           }}
         >
           <div className="title"> Fractal formation</div>
           <div>
             The Sierpinsky Carpet is a 2D generalization of the Cantor Set:
           </div>
-          <img src="/assets/cantorset.png" alt="Image not found" />
+          <img src="/assets/cantorset.png" alt="Cantor set not found" />
           <div>Method:</div>
           <div>
             Create a N x N grid depending on the recursion level (r), with N = 3
@@ -61,12 +59,12 @@ export default function FractalFormation() {
             style={
               show
                 ? {
-                    position: "absolute",
-                    backgroundColor: "white",
-                    borderRadius: 15,
-                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
-                    padding: 18,
-                  }
+                  position: "absolute",
+                  backgroundColor: "white",
+                  borderRadius: 15,
+                  boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
+                  padding: 18,
+                }
                 : { display: "none" }
             }
           >

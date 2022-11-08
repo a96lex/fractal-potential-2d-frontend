@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Hamiltonian() {
   return (
@@ -13,12 +13,10 @@ export default function Hamiltonian() {
         <div
           style={{
             display: "flex",
-            width: 800,
             flexDirection: "column",
             marginTop: "2.5%",
             height: "60%",
             justifyContent: "space-between",
-            width: 550,
           }}
         >
           <div className="title">Introduction</div>

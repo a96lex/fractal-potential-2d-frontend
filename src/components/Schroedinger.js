@@ -58,6 +58,7 @@ export default function Hamiltonian() {
             <img
               src="https://latex.codecogs.com/gif.latex?\frac{-h^2}{2m}\left&space;(&space;\frac{\partial&space;^2}{\partial&space;x^2}&space;&plus;&space;\frac{\partial&space;^2}{\partial&space;y^2}&space;\right&space;)\psi&space;&plus;&space;V(x,y)\psi&space;=&space;E(x,y)"
               title="\frac{-h^2}{2m}\left ( \frac{\partial ^2}{\partial x^2} + \frac{\partial ^2}{\partial y^2} \right )\psi + V(x,y)\psi = E(x,y)"
+              alt="tise eq"
             />
           </div>
           {/* \frac{-h^2}{2m}\left ( \frac{\partial ^2}{\partial x^2} + \frac{\partial ^2}{\partial y^2} \right )\psi + V(x,y)\psi = E(x,y) */}
@@ -74,6 +75,7 @@ export default function Hamiltonian() {
               <img
                 src="https://latex.codecogs.com/gif.latex?E\psi&space;=&space;H\psi"
                 title="E\psi = H\psi"
+                alt="tise reordered"
               />
             </div>
             <div style={{ margin: "0 25px 8px 25px" }}>With</div>
@@ -81,6 +83,7 @@ export default function Hamiltonian() {
               <img
                 src="https://latex.codecogs.com/gif.latex?H&space;=&space;\frac{-h^2}{2m}\left&space;(&space;\frac{\partial&space;^2}{\partial&space;x^2}&space;&plus;&space;\frac{\partial&space;^2}{\partial&space;y^2}&space;\right&space;)&space;&plus;&space;V(x,y)"
                 title="H = \frac{-h^2}{2m}\left ( \frac{\partial ^2}{\partial x^2} + \frac{\partial ^2}{\partial y^2} \right ) + V(x,y)"
+                alt="hamiltonian equation"
               />
             </div>
           </div>
@@ -101,12 +104,12 @@ export default function Hamiltonian() {
             style={
               show
                 ? {
-                    position: "absolute",
-                    backgroundColor: "white",
-                    borderRadius: 15,
-                    boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
-                    padding: 18,
-                  }
+                  position: "absolute",
+                  backgroundColor: "white",
+                  borderRadius: 15,
+                  boxShadow: "0 0 13px 6px rgba(0,0,0,0.10)",
+                  padding: 18,
+                }
                 : { display: "none" }
             }
           >
